@@ -13,6 +13,37 @@
                 background-color: transparent;
                 text-decoration: none;
             }
+            table,th,td {
+                border:1px solid black;
+                border-collapse: collapse;
+            }
+            th, td {
+                padding-right: 50px;
+                border-spacing: 50px;
+
+            }
+            tr:nth-child(even) {
+                background-color: beige;
+
+
+            }
+            .city {
+                background-color: black;
+                color:white;
+                padding: 20px;
+                margin: 20px;
+                border: 5px solid black;
+
+            }
+            .town {
+                background-color: brown;
+                color: white;
+                padding: 25px;
+                margin: 20px;
+                border: 2px solid black;
+            }
+
+            
         </style>
     </head>
     <body>
@@ -49,6 +80,86 @@
         <h4 id="C4">Chapter 4</h4>
         <p>this chapter explain some thing</p>
         <img src="images.jpg" alt="some thing is there" width="128" height="128">
+        <h3>HTML Table</h3>
+        <table style="width: 100px;">
+            <caption>company lists</caption>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Itorizon</td>
+                <td>Vidya</td>
+                <td>India</td>
+            </tr>
+            <tr>
+                <td>abc</td>
+                <td>a</td>
+                <td>india</td>
+            </tr>
+        </table><br>
+        <h3>vertical HTML table</h3>
+        <table>
+            <caption>Names</caption>
+            <tr>
+                <th>FirstName</th>
+                <td>jai</td>
+                <td>shridhar</td>
+            </tr>
+            <tr>
+                <th>LastName</th>
+                <td>kumar</td>
+                <td>hegde</td>
+            </tr>
+
+        </table>
+        <h3>unoredred list</h3>
+        <ul>
+            <li>coffee</li>
+            <li>tea</li>
+            <li>milk</li>
+        </ul>
+        <h3>oredred list</h3>
+        <ol>
+            <li>coffee</li>
+            <li>tea</li>
+            <li>milk</li>
+        </ol>
+        <div class="city">
+            <h2>London</h2>
+            <p>London is the capital city of england.</p>
+        </div>
+        <div class="town">
+            <h2>pavagada</h2>
+            <p>pavagada is a small town.</p>
+        </div>
+        <div class="city">
+            <h2>London</h2>
+            <p>London is the capital city of england.</p>
+        </div>
+        <!---HTML FORMS-->
+        <h2>HTML Forms</h2>
+        <form>
+            <label>FirstName</label>
+            <input type="text" name="fn"><br>
+            <label>LastName</label>
+            <input type="text" name="ln"><br>
+            <label>MobileNumber</label>
+            <input type="tel" name="mb"><br>
+            <label>Email</label>
+            <input type="Email" name="mail"><br>
+            <label>Password</label>
+            <input type="Password" name="pwd"><br>
+            <label>Confirm password</label>
+            <input type="password" name="confirmpassword"><br>
+            
+
+
+
+        </form>
+
+        
 
 
 
