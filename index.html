@@ -42,6 +42,42 @@
                 margin: 20px;
                 border: 2px solid black;
             }
+            .para {
+                height: 200px;
+                width: 100%;
+                background-color: aqua;
+                text-align: center;
+                font-size: larger;
+            
+
+            }
+            .out {
+                border: 2px solid black;
+                outline-style: solid;
+                outline-color: rgb(55, 94, 94);
+                outline-width: medium;
+
+            }
+            .offset {
+                margin: 30px;
+                border: 2px solid black;
+                outline:rgb(55, 94, 94);
+                outline-offset: rgb(217, 180, 70);
+            }
+            .text {
+                text-transform: uppercase;
+            }
+            .text {
+                text-transform: lowercase;
+            }
+            .spacing {
+                letter-spacing: 15px;
+            }
+            .shadow {
+                color: #000;
+                font-size: larger;
+                text-shadow: 2px 2px 4px;
+            }
 
             
         </style>
@@ -141,18 +177,61 @@
         <!---HTML FORMS-->
         <h2>HTML Forms</h2>
         <form>
-            <label>FirstName</label>
-            <input type="text" name="fn"><br>
-            <label>LastName</label>
-            <input type="text" name="ln"><br>
-            <label>MobileNumber</label>
-            <input type="tel" name="mb"><br>
-            <label>Email</label>
-            <input type="Email" name="mail"><br>
-            <label>Password</label>
-            <input type="Password" name="pwd"><br>
-            <label>Confirm password</label>
-            <input type="password" name="confirmpassword"><br>
+            <label for="fname">First name : </label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">LastName : </label>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="mail">EmailId : </label>
+            <input type="email" id="mail" name="mail"><br>
+            <label for="PhNo"> PhoneNumber : </label>
+            <input type="tel" id="PhNo" name="PhNo"><br>
+            <label for="dob">DOB : </label>
+            <input type="date" id="dob" name="dob"><br>
+            <label for="add"> Complete_Address</label>
+            <input type="address" id="add" name="add"><br>
+            <P>Choose your favorite language</P>
+            <input type="radio" id="html" name="fav_lang">
+            <label for="html">HTML</label>
+            <input type="radio" id="css" name="fav_lang">
+            <label for="css">CSS</label>
+            <input type="radio" id="JS" name="fav_lang">
+            <label for="JS">JavaScript</label><br>
+            <!--checkboxs-->
+            <input type="checkbox" id="chb" name="chb">
+            <label for="chb">We have some other coureses</label><br>
+            <!--Drop down list-->
+            <label for="coureses">Choose a Coures</label>
+            <select id="coureses" name="coureses">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+                <option value="Javascript">JavaScript</option>
+            </select>
+            <!--height and weight in css-->
+            <div class="para">
+                <p>this is paragraph</p>
+            </div>
+            <div class="out">
+                <P>This is the css outline</P>
+            </div>
+            <!--Outline-offset property-->
+            <div class="offset">
+                <p>This is the Outliine-offset property</p>
+            </div>
+            <!--Text Transformation in css-->
+            <div class="text">
+                <p>This is the Text Transformation in css</p>
+            </div>
+            <!--Text Spacing in css property-->
+            <div class="spacing">
+                <p>This is the Text Spacing property in css</p>
+            </div>
+            <!--Text shadow property in css-->
+            <div class="shadow">
+                <p>This is the shadow property in css</p>
+            </div>
+            <!--Styling Links in css property-->
+            
+            
             
 
 
