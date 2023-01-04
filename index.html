@@ -163,6 +163,47 @@
             width: 100%;
             padding: 1px 20px;
            }
+           .form input[type=text] {
+            width:100%;
+            box-sizing: border-box;
+            border:2px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: white;
+            background-color: url('search icon.jpg');
+            background-position: 10px 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+
+           }
+           #border-image {
+            border:10px solid transparent;
+            padding: 15px;
+            border-image: url(css_border-image-3c.png  ) 30 round;
+
+           }
+           .transition {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 2s, height 2s, transform 2s;
+           }
+           .transition:hover {
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+           }
+           .col {
+            column-count: 2;
+           }
+           .resize {
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            resize: horizontal;
+            overflow: auto;
+
+           }
           
             
 
@@ -374,10 +415,30 @@
             </div>
         </div>
         <form class="form">
-            <label for="fname">FirstName</label>
-            <input type="text" id="fname" name="fname">
+            <input type="text" name="Search" placeholder="Search...">
         </form>
-        
+        <!---Border Image Property-->
+        <H2>Border Image property in CSS</H2>
+        <p id="border-image">Border Image Property in CSS</p>
+        <P>Here is the Original image :</P>
+
+        <!--CSS Gradients-->
+        <!--CSS OverFlow by giving over-flow: visible we can see the remaining text-->
+        <!-- CSS Word Wrap is used for the splitting the long word by using word-wrap: break-word-->
+        <!--CSS 2D-Transforms and 3D-Transforms-->
+        <!--Transition Transforms- changes the property values smoothly-->
+        <h3>Transition and transfroms in CSS</h3>
+        <div class="transition"></div>
+        <!--Object fit property and Object position property-->
+        <div class="col">
+            fytdtyfuygyfufyhgtxckjyyutdyxdcvhyfx
+        </div>
+        <!--CSS Resizing Prperty - this property says how an element should is 
+        is resized by the user.-->
+        <h3>The resize Property!..</h3>
+        <p class="resize">This is the resize css property by user resize only
+            the width of the element> </p>
+
 
 
 
