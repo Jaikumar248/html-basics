@@ -1,0 +1,67 @@
+* {
+    background-color: rgb(243, 241, 239);
+    box-sizing: border-box;
+  }
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+  }
+
+  .navbar ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .navbar li a {
+    padding: 5px;
+    margin-left: 5px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+  }
+  a:hover{
+    background-color: rgb(231, 224, 224);
+
+  }
+
+  li {
+    display: inline;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: 60px 100px 200px 200px 75px 70px;
+    grid-template-areas: 
+    'header header navbar navbar icons icons'
+    'dev dev aside aside aside aside'
+    'dev dev icons icons1 icons1 icons1'
+    'dev dev p p p p'
+    'dev dev button button button button';
+  }
+
+  .header {
+    grid-area: header;
+  }
+  .navbar {
+    grid-area: navbar;
+  }
+  .icons {
+    grid-area: icons;
+  }
+  .dev {
+    grid-area: dev;
+  }
+  .aside {
+    grid-area: aside;
+  }
+  .icons1{
+    grid-area: icons1;
+  }
+  .p {
+    grid-area: p;
+  }
+  button {
+    grid-area: button;
+  }
