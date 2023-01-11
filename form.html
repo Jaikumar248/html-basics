@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forms</title>
+    <style>
+        .forms {
+            text-align: center;
+            background-color: lightgray;
+            width: 400px;
+            height: auto;
+            margin-left: 600px;
+            margin-top: 100px;
+            border-radius: 15px;
+        }
+
+        body {
+            align-items: center;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="forms">
+        <form>
+            <fieldset>
+                <legend>signin form</legend>
+
+                <table>
+                    <tr>
+                        <td><label for="fname">First name : </label></td>
+                        <td><input type="text" id="fname" name="fname" placeholder="FirstName"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lname">LastName : </label></td>
+                        <td><input type="text" id="lname" name="lname" placeholder="LastName"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">EmailId : </label></td>
+                        <td><input type="email" id="email" name="email" placeholder="emailId"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password">Password : </label></td>
+                        <td><input type="password" id="password" name="password" placeholder="password"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="confirm">confirm password : </label></td>
+                        <td><input type="password" id="confirm" name="confirm" placeholder="re-type-password"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="PhNo">PhoneNumber : </label></td>
+                        <td><input type="tel" id="PhNo" name="PhNo" placeholder="phone number"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">DOB : </label></td>
+                        <td><input type="date" id="dob" name="dob"><br></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Gender">Select Gender : </label><br></td>
+                        <td><span><input type="radio" name="Gender" id="male"><label
+                                    for="male">Male</label></span><input type="radio" name="Gender" id="female"><label
+                                for="female">Female</label><span></span></td>
+
+                    </tr>
+                    <tr>
+                        <td><label for="language">How many languages do you know</label><br></td>
+                        <td><span><input type="checkbox" name="language" id="language"> <label
+                                    for="language">HTML</label></span> <span><input type="checkbox" name="language1"
+                                    id="language1">
+                                <label for="language1">CSS</label></span></td>
+                    </tr>
+                    <tr>
+                        <td><button>submit</button></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

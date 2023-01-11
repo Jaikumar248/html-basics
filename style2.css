@@ -31,8 +31,7 @@ html {
 
   .container {
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    grid-template-rows: 60px 100px 200px 200px 75px 70px;
+    grid-template-columns: auto auto auto auto auto;
     grid-template-areas: 
     'header header navbar navbar icons icons'
     'dev dev aside aside aside aside'

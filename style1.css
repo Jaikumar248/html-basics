@@ -29,6 +29,16 @@
   }
 
 
+  .signin a {
+   float: left;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-family: "Lucida Sans", sans-serif;
+
+  }
+
+
   .nav ul {
     list-style-type: none;
     padding: 0px;
@@ -70,7 +80,7 @@
   .dev img {
     border-radius: 15px;
     width: 500px;
-    height: 550px;
+    height: 500px;
     margin-left: 75px;
     padding: 10px;
   }
@@ -122,11 +132,12 @@
   }
   #para {
     margin-top: 50px;
-    margin-right: 250px;
+    margin-right: 0px;
   }
 
 
   @media only screen and (min-width:600px){
+   
     .col-s-1 {width: 8.33%;}
     .col-s-2 {width: 16.66%;}
     .col-s-3 {width: 25%;}
