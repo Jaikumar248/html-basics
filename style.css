@@ -2,6 +2,7 @@
   * {
   
     box-sizing: border-box;
+    background-color: rgb(243, 241, 239);
   }
   html {
     font-family: "Lucida Sans", sans-serif;
@@ -15,15 +16,40 @@
   }
 
   .image {
-    grid-column: 2;
-    margin-right: 300px;
+    grid-area: 2 / 1 / span 5 / span 1;
+    margin-left: 200px;
   }
 
   .aside {
-    grid-column: 3/5;
-    margin-right: 200px;
-
+    grid-area: 2 / 2 / span 1 / span 3;
+    margin-left: 100px;
   }
+  .icons1 {
+    margin-left: 100px;
+  }
+
+  #text {
+    font-size: medium;
+    color: black;
+    background-color: white;
+  }
+  #text1 {
+    font-size: medium;
+    color: black; 
+    background-color: white; 
+  }
+  #text0 {
+    font-size: medium;
+    color: black;
+    background-color: white;
+  }
+
+ .paragraph {
+  grid-area: 5 / 2 / span 1 / span 3;
+  margin-left: 100px;
+ }
+
+
 
   .icons1 i {
     font-size: 30px;
@@ -46,6 +72,8 @@
 
   .navbar ul {
     list-style-type: none;
+    margin-right: 50px;
+    justify-content: center;
    
   }
 
@@ -85,3 +113,55 @@
    
     padding: 10px;
   }
+
+  a:hover{
+    background-color: rgb(231, 224, 224);
+
+  }
+
+  button {
+    background-color: bisque;
+    padding: 10px;
+    border-color: bisque;
+    margin-top: 25px;
+  }
+
+  .icons i {
+    background-color: white;
+    border-radius: 5px;
+    width: 8%;
+    height: 5%;
+    }
+
+  @media only screen and (max-width: 500px) {
+   .header {
+    grid-area: 1 / 1 / span 1 / span 2;
+   }
+   .navbar {
+    grid-area: 1 / 3 / span 1 / span 3;
+   }
+   .icons {
+    grid-area: 2 / 1 / span 1 / span 1;
+   }
+   .signin {
+    grid-area: 2 / 3 / span 1 / span 2;
+   }
+   .image {
+    grid-area: 3 / 1 / span 6 / span 4;
+   }
+   .aside {
+    grid-area: 10 / 1 / span 1 / span 4;
+   }
+
+   .icons1 {
+    grid-area: 11 / 1 / span 1 / span 4;
+   }
+   .paragraph {
+    grid-area: 12 / 1 / span 1 / span 4;
+   }
+
+  }
+   
+
+
+

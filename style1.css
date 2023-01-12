@@ -101,10 +101,6 @@
     margin-top: 25px;
   }
 
-
-  [class*="col-"]{
-    width:100%;
-  }
    
   .icons1 i {
     font-size: 30px;
@@ -121,18 +117,25 @@
   #text {
     font-size: medium;
     color: black;
+    background-color: white;
   }
   #text1 {
     font-size: medium;
-    color: black;  
+    color: black; 
+    background-color: white; 
   }
   #text0 {
     font-size: medium;
     color: black;
+    background-color: white;
   }
   #para {
     margin-top: 50px;
     margin-right: 0px;
+  }
+
+  [class*="col-"]{
+    width:100%;
   }
 
 
