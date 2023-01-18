@@ -186,13 +186,153 @@ const array4 = new Array("saab", "ehwhf");
 array4[1]= "BMW"
 document.getElementById("demo3").innerHTML = array4;
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-let fLen = fruits.length;
-for (let i = 0; i < fLen; i++){
-    ar[i] = fruits[i];
-    document.getElementById("demo3").innerHTML = ar[i];
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// let fLen = fruits.length;
+// for (let i = 0; i < fLen; i++){
+//     let ar[i] = fruits[i];
+//     document.getElementById("demo3").innerHTML = ar[i];
+// }
+const fruits = ["banana", "Orange", "Apple"];
+document.getElementById("demo3").innerHTML = fruits;
+
+function myFunction2() {
+    fruits.push("Lemon");
+document.getElementById("demo3").innerHTML = fruits;
 }
 
+const fruits1 =["banana", "Orange", "Apple"];
+document.getElementById("demo3").innerHTML = fruits1.toString();
+
+const fruits2 = ["a", "b", "c", "d"];
+document.getElementById("demo3").innerHTML = fruits2.join(" + ");
+
+const fruits3 = ["a", "bb", "cc", "aaaa"];
+fruits3.shift();
+document.getElementById("demo3").innerHTML = fruits3;
+
+const myGirls = ["Cecilie", "Lone"];
+const myboys = ["emil", "Tobias", "Linus"];
+const myChildren = myboys.concat(myGirls);
+document.getElementById("demo3").innerHTML = myChildren;
+
+const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
+fruits4.splice(2, 0, "aaa", "qqq");
+document.getElementById("demo3").innerHTML = fruits4;
+
+const fruits5 = ["Banana", "Orange", "Apple", "Mango"]
+let removed = fruits5.splice(2, 2, "aa", "bbb");
+document.getElementById("demo3").innerHTML = fruits5;
+// document.getElementById("demo3").innerHTML = removed;
+
+const someThing = ["Banana", "Orange", "Apple", "Mango"];
+someThing.splice(0,2);
+document.getElementById("demo3").innerHTML = someThing;
+
+const sor = ["1", "2", "1", "3"];
+sor.reverse();
+document.getElementById("demo3").innerHTML = sor;
 
 
+const number = [1, 2, 3, 4, 5];
+let n = "";
+number.forEach(myFunction3);
+document.getElementById("demo3").innerHTML = n;
+
+function myFunction3(value, index, number) {
+    n += value + "<br>";
+}
+
+const number1 = [1, 2, 3, 4, 5];
+let allOver18 = number1.every(myFunctions);
+
+document.getElementById("demo3").innerHTML = allOver18;
+
+function myFunctions(value) {
+    return value > 19;
+}
+
+const number2 = [1, 2, 3, 4, 5];
+const keys = number2.keys();
+
+let txt = "";
+for (let x of keys) {
+    txt += x + "<br>"
+}
+document.getElementById("demo3").innerHTML = txt;
+
+//Java script Date() method....
+let d = new Date();
+document.getElementById("demo3").innerHTML = d;
+
+
+const d1 = new Date("October 13, 2014 11:11:00");
+document.getElementById("demo3").innerHTML = d1;
+
+const d2 = new Date(2023, 1, 5, 12, 30, 11);
+document.getElementById("demo3").innerHTML = d2;
+
+const d3 = new Date("2023-01-18");
+document.getElementById("demo3").innerHTML = d3;
+
+const date = new Date("2012-03-22");
+document.getElementById("demo3").innerHTML = date.getMonth()+1;
+
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+const d11 = new Date("2022-10-11");
+let month = months[d11.getMonth()];
+document.getElementById("demo3").innerHTML = month;
+
+const d22 = new Date();
+d22.setFullYear(2022);
+document.getElementById("demo3").innerHTML = d22;
+
+document.getElementById("demo3").innerHTML = Math.PI;
+
+
+if (new Date().getHours() < 18) {
+    document.getElementById("demo3").innerHTML = "Good Day!"
+}
+
+let hour = new Date().getHours();
+let greeting ;
+if (hour > 18) {
+    greeting = "GOod Day!"
+}
+else {
+    greeting = "Good Evening!"
+}
+document.getElementById("demo3").innerHTML = greeting;
+ 
+
+// switch statments in java script.....
+
+let day;
+switch (new Date().getDay()) {
+    case 0:
+       day = "sunday" ;
+       break;
+    case 1:
+        day = "monday";
+        break;
+    case 2:
+        day = "tuesday";
+        break;
+    case 3:
+        day = "wednesday";
+        break;
+     case 4:
+        day = "Thursday";
+        break;
+    case 2:
+        day = "Friday";
+        break;
+    case 3:
+        day = "Saturday";
+        break;
+    default :
+      day = "opps"
+}
+
+document.getElementById("demo3").innerHTML = day;
 
