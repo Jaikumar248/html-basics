@@ -336,3 +336,125 @@ switch (new Date().getDay()) {
 
 document.getElementById("demo3").innerHTML = day;
 
+// For loop........
+const loop = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+let print = "";
+for (let i=0; i<loop.length; i++){
+    print += loop[i] + "<br>";
+}
+document.getElementById("demo3").innerHTML = print;
+
+const obj = {
+    fname:"jai",
+    lname:"kumar",
+    age:22
+};
+let txt1 = " ";
+for (let x in obj) {
+    txt1 += obj[x] + " ";
+}
+document.getElementById("demo3").innerHTML = txt1;
+
+const numbs = [1, 2, 3, 4, 5];
+let txt2 = "";
+numbs.forEach(myFunction4) 
+    document.getElementById("demo3").innerHTML = txt2;
+
+
+function myFunction4(value, index, array){
+    txt2 += value + "<br>";
+}
+
+const some = ["BMW", "Volvo", "Mini"];
+let loopIn = "";
+for (x of some){
+    loopIn += x + "<br>"
+}
+document.getElementById("demo3").innerHTML = loopIn;
+
+
+//creating the new set ...
+const letters = new Set([1, 2, 3]);
+let sets = " ";
+for (const x of letters) {
+    sets += x;
+}
+document.getElementById("demo3").innerHTML = sets;
+
+// creating the map 
+
+// const mapping = new Map([
+//     ["apple", 400],
+//     ["banana", 22],
+//     ["orange", 222]
+// ]);
+// document.getElementById("demo3").innerHTML = mapping.get("apple");
+
+const mapping = new Map();
+ mapping.set("apples", 500);
+ mapping.set("banana", 200);
+ mapping.set("orange", 200);
+
+ mapping.set("apples", 250);
+ document.getElementById("demo3").innerHTML = mapping.has("banana");
+
+ // Error handling .....
+ try {
+    adddlert("welcome")
+ }
+ catch(someWrong) {
+    document.getElementById("demo3").innerHTML = someWrong;
+
+ }
+
+ function myFunctionError() {
+    const message = document.getElementById("demo5").innerHTML = "";
+    let x = document.getElementById("demo4").value;
+    try {
+        if(isNaN(x)) throw "This is not a number ";
+        if (x < 5) throw "The Number is low ";
+        if(x > 10) throw " the number is High";
+    }
+    catch(error) {
+        message.innerHTML = "Input is " + error;
+    }
+ }
+
+ let num11 = 1;
+ try {
+   decodeURI("%%%%")
+ }
+ catch(err) {
+    document.getElementById("demo3").innerHTML = err;
+ }
+
+ const person11 = {
+    firstName: "jai",
+    lastName: "Kumar",
+    id: 123,
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+ };
+ document.getElementById("demo3").innerHTML = person11.fullName();
+
+ //Arrow Function ....
+
+ let myFunctionArrow = (a,b) => a * b;
+ document.getElementById("demo3").innerHTML = myFunctionArrow(2, 5);
+
+ let hello = " ";
+ hello = function() {
+    return "hello world!";
+ }
+ document.getElementById("demo3").innerHTML = hello();
+
+ hello = () => {
+    return "hello world!!!!!!"
+ }
+ document.getElementById("demo3").innerHTML = hello()
+
+ helo = 2;
+ document.getElementById("demo3").innerHTML = helo;
+ helo ="x";
+ document.getElementById("demo3").innerHTML = helo;
