@@ -458,3 +458,347 @@ const mapping = new Map();
  document.getElementById("demo3").innerHTML = helo;
  helo ="x";
  document.getElementById("demo3").innerHTML = helo;
+
+ let add = (a, b) => a + b;
+ document.getElementById("demo3").innerHTML = add(6, 7);
+
+ for (let i = 0; i < 10 ; i++) {
+
+ }
+//CLASSES
+ class cars {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+
+    }
+    age(x) {
+        return x - this.year;
+    }
+ }
+
+ let date1 = new Date();
+ let year = date.getFullYear();
+ let myCar = new cars("BMW", "2022");
+ let myCarUp = new cars("BMW", "2014");
+document.getElementById("demo3").innerHTML = myCarUp.age(year);
+
+
+// Creating object using object Literal......
+let movie = {
+   name:"RRR",
+   release:2022,
+   directer:"SSR"
+}
+// console.log(movie)
+document.getElementById("demo3").innerHTML = movie.name;
+// Adding new properties in Object 
+movie.budget = "500 crores"
+console.log(movie)
+
+// TO Create an Object by using new operator object constructor
+
+let movie1 = new Object();
+movie1.name = "KGF";
+movie1.release = "2022";
+movie1.director = "prashanthNeel";
+
+console.log(movie1)
+
+// Using new operator with Constructer function....
+class user {
+    constructor(name, age, place) {
+        this.name = name;
+        this.age = age;
+        this.place = place;
+    }
+}
+
+let user1 = new user("jaikumar", 22, "pavagada");
+console.log(user1);
+
+// const person2 = {
+//   fname:" John",
+//   lname:" Doe",
+//   age: 25,
+//   car: {
+//     car1: "Ford",
+//     car2: "BMW",
+//     car3: "Fait"
+//   }
+// };
+// person2.nationality = "english";
+// delete person2.age;
+// text = "";
+
+// for (let x in person2) {
+//     text += person2[x];
+// }
+// document.getElementById("demo3").innerHTML =person2.car.car2;
+
+// const myObj = {
+//     name: "jai",
+//     age: 22,
+//     cars:
+// }
+
+// Methods in javascript
+
+// const personName = {
+//     fname: " jai",
+//     lname: "kumar",
+//     age: 22,
+//     fullName: function() {
+//         return this.fname + " " + this.lname + " " + this.age;
+//     }
+// };
+
+// document.getElementById("demo3").innerHTML = personName.fullName();
+
+// // let per = {
+//     firstName: "jai",
+//     lastName: "kumar",
+//     age: "22"
+// };
+// per.nationality = "english";
+// delete per.age;
+// let text33 = "";
+// for (let x in per) {
+//     text33 += per[x];
+// }
+// document.getElementById(demo3).innerHTML = text33;
+
+//Nested Objects..
+// const myObject = {
+//     name: "jai",
+//     lname: "kumar",
+//     cars: {
+//         car1: "BMW",
+//         car2: "Ford"
+//     }
+// };
+
+//Nested Arrays and Objects.....
+let xx = "";
+const myObjects = {
+    name: "jaikumar",
+    age: 222,
+    cars: [
+        {name: "Ford", models:["Fiesta", "Focus", "Mustang"]},
+        {name: "BMW", models:["320", "X3", "X5"]}
+    ]
+}
+
+// for (let i in myObjects) {
+//    xx += myObjects.cars[i].name;
+//    for(let j in myObjects.cars) {
+//     xx += myObjects.cars[i].models[j];
+//    }
+// }
+document.getElementById("demo3").innerHTML = xx;
+
+// JavaScript Object Methods 
+const pers = {
+    firstName: "jaikumar",
+    lastName: "......",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+document.getElementById("demo5").innerHTML = pers.fullName();
+
+let person22 = {
+name: "John",
+    age: 30,
+    city: "new York"
+};
+
+
+document.getElementById("demo11").innerHTML = Object.values(person22);
+
+document.getElementById("demo5").innerHTML = JSON.stringify(person22);
+
+// Java Script Object Accessors...
+const accessors = {
+    name: "jaikumar",
+    age: 22,
+    language: "english",
+    get lang() {
+        return this.language;
+    }
+};
+document.getElementById("demo11").innerHTML = accessors.lang;
+
+const accessor = {
+    name: "jaikumar",
+    age: 22,
+    language: " ",
+    set lang(lang) {
+        this.language = lang.toUpperCase();
+    }
+
+};
+accessor.lang = "Kannada";
+
+document.getElementById("demo11").innerHTML = accessor.language;
+
+// java Script Object Constructor...
+
+// class Person {
+//     constructor(first, last, age) {
+//         this.fname = first;
+//         this.lname = last;
+//         this.age = age;
+
+//     }
+// }
+// const myName = new Person("jai", "kumar", 22);
+// // // document.getElementById("demo3").innerHTML = myName.age;
+// // console.log(myName);
+
+// class PersonA {
+//     constructor(first, last, age, eye) {
+//         this.firstName = first;
+//         this.lastName = last,
+//             this.age = age;
+//         this.eyeColor = eye;
+//     }
+// }
+// const myFather = new PersonA("john", "Doe", 50, "blue");
+// const myMother = new PersonA("Sally", "Rally", 44, "green");
+// console.log(  myFather.age );
+// document.getElementById("demo5").innerHTML = "myfather age is " + myFather.age + "myMother age is " + myMother.age;
+// class MyFunction {
+//     constructor(first, last, age, eye) {
+//         this.firstName = first;
+//         this.lastName = last;
+//         this.age = age;
+//         this.eye = eye;
+
+//     }
+// }
+
+// MyFunction.prototype.nationality = "english";
+// const myFather1 = new Person("John", "Doe", 50, "blue");
+// document.getElementById("demo3").innerHTML =
+// "The nationality of my father is " + myFather1.nationality; 
+
+// java script iterables...
+
+const someThing2 = "Jaikumar";
+
+let txt3 = "";
+for (const x of someThing2) {
+    txt3 += x + "<br>";
+
+}
+document.getElementById("demo3").innerHTML = txt3;
+
+// create a set ...
+const setts = new Set(["a", "b", "c"]);
+document.getElementById("demo5").innerHTML = setts.size;
+
+const literals = new Set();
+
+// literals.add("a");
+
+// const a = "a";
+// const b = "b";
+
+// literals.add(a);
+// literals.add(b);
+
+//Maps in Java script 
+let fruits11 = new Map([
+    ["apples", 500],
+    ["banana", 200],
+    ["Oranges", 100]
+]);
+
+document.getElementById("demo3").innerHTML = fruits11.get("apples");
+
+const fruits12 = new Map();
+fruits12.set("apples", 1000);
+fruits12.set("banana", 230);
+
+document.getElementById("demo3").innerHTML = fruits12.has("apples")
+
+//Functions in javascript
+
+const xxx = function (a, b) {  return a+b };
+document.getElementById("demo3").innerHTML = xxx(2,3);
+
+( function () {
+    document.getElementById("demo3").innerHTML = "Hello I called myself";
+}
+
+) ( );
+
+function myFunction(a, b) {
+    return a + b;
+}
+
+let p = myFunction(4, 5);
+document.getElementById("demo3").innerHTML = p;
+
+const g = (x,y) => x+y;
+document.getElementById("demo3").innerHTML = g(2, 3);
+
+// document.getElementById("demo3").innerHTML = findMax(2, 4, 9);
+
+function findMax() {
+    let max = -Infinity;
+    for (let i = 0; i < arguments.length; i++) {
+        if (arguments[i] > max) {
+            max = arguments[i];
+        }
+    }
+    return max;
+}
+document.getElementById("demo3").innerHTML = findMax(3, 9, -12, 3);
+
+const myObje = {
+    firstName: "Jai",
+    lastName: "Kumar",
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+document.getElementById("demo3").innerHTML = myObje.fullName();
+
+function myFunction11(arg1, arg2) {
+    this.firstName = arg1;
+    this.lastName = arg2;
+
+}
+const person_t = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+const person_t1 = {
+    firstName: "John",
+    lastName: "Doe"
+}
+const person_t2 = {
+    firstName: "Marry",
+    lastName: "Doe"
+}
+let barrow = person_t.fullName.bind(person_t1);
+document.getElementById("demo3").innerHTML = barrow;
+
+const person12 = {
+      firstName: "Jai",
+      lastName: "Kumar",
+      fullName: function() {
+        return this.firstName + " " + this.lastName;
+      }
+};
+
+const person13 = {
+    firstName: "John",
+    lastName: "Doe"
+};
+
+let barrowing = person12.fullName.bind(person13);
+document.getElementById("demo3").innerHTML = barrowing();
