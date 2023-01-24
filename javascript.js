@@ -103,14 +103,14 @@ let name0 = "Hello";
 let name1 = "jai";
 let name2 = "kumar";
 let name3 = name0.concat(" ", name1, " ", name2);
-document.getElementById("demo3").innerHTML = name3;
+// document.getElementById("demo3").innerHTML = name3;
 
 //converting number to string 
 
 let num = 5;
 let con = num.toString();
 let pad = con.padEnd(4, "2");
-document.getElementById("demo3").innerHTML = pad;
+// document.getElementById("demo3").innerHTML = pad;
 
 // Exctracting the string characters
 let char = "jaikumar";
@@ -614,7 +614,7 @@ name: "John",
 };
 
 
-document.getElementById("demo11").innerHTML = Object.values(person22);
+// document.getElementById("demo11").innerHTML = Object.values(person22);
 
 document.getElementById("demo5").innerHTML = JSON.stringify(person22);
 
@@ -627,7 +627,7 @@ const accessors = {
         return this.language;
     }
 };
-document.getElementById("demo11").innerHTML = accessors.lang;
+// document.getElementById("demo11").innerHTML = accessors.lang;
 
 const accessor = {
     name: "jaikumar",
@@ -640,7 +640,7 @@ const accessor = {
 };
 accessor.lang = "Kannada";
 
-document.getElementById("demo11").innerHTML = accessor.language;
+// document.getElementById("demo11").innerHTML = accessor.language;
 
 // java Script Object Constructor...
 
@@ -802,3 +802,54 @@ const person13 = {
 
 let barrowing = person12.fullName.bind(person13);
 document.getElementById("demo3").innerHTML = barrowing();
+
+// DOM Document objecr model  in javscript.....
+
+const element = document.getElementById("intro");
+
+document.getElementById("demo8").innerHTML = element.innerHTML;
+
+const element1 = document.getElementsByTagName("p");
+document.getElementById("demo8").innerHTML = element1[1].innerHTML;
+
+const element2 = document.getElementById("main");
+const elementx = element2.getElementsByTagName("p");
+
+document.getElementById("demo8").innerHTML = elementx[0].innerHTML;
+
+document.getElementById("demo11").style.color = "blue";
+
+function changeText(id) {
+    id.innerHTML = "Oops!";
+}
+
+function displayDate() {
+    document.getElementById("demo22").innerHTML = Date();
+}
+
+// Using Events ..
+// document.getElementById("myBtn").addEventListener("click", displayDate);
+
+// function displayDate() {
+//     document.getElementById("demo12").innerHTML = Date();
+// }
+// document.getElementById("myBtn").addEventListener("click", function() {
+//     alert("Hello world");
+// })
+
+var xyz = document.getElementById("myBtn");
+xyz.addEventListener("mouseover", myFunction);
+xyz.addEventListener("click", mySecondFunction);
+xyz.addEventListener("mouseout", myThirdFunction);
+
+function myFunction() {
+    document.getElementById("demo12").innerHTML +="Mouse Over!!!!<br>";
+}
+
+function mySecondFunction() {
+    document.getElementById("dmeo12").innerHTML += "CLICKED <br>";
+}
+
+function myThirdFunction() {
+   document.getElementById("demo12").innerHTML += "MouseOut <br>";
+}
