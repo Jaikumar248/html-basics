@@ -853,3 +853,67 @@ function mySecondFunction() {
 function myThirdFunction() {
    document.getElementById("demo12").innerHTML += "MouseOut <br>";
 }
+
+// document.getElementById("demo13").innerHTML = "screen width is " + navigator.appCodeName;
+
+function myConfirm() {
+    var txt = "";
+    if (confirm("press a button")) {
+        txt = "you pressed OK!"
+    }
+    else {
+        txt = "you pressed Cancel!"
+    }
+    document.getElementById("demo13").innerHTML = txt;
+}
+
+// function myValid() {
+//     const intObj =document.getElementById("id1");
+//     if(! intObj.checkValidity()) {
+//         document.getElementById("id2").innerHTML =
+//         intObj.validationMessage;
+//     } else {
+//         document.getElementById("id2").innerHTML = "Input OK";
+//     }
+// }
+
+function myValid() {
+    let text = "Value OK";
+    if (document.getElementById("id1").validity.rangeOverflow) {
+        text = "Value too large";
+    }
+}
+
+localStorage.setItem("name", "jaikumar");
+document.getElementById("id2").innerHTML =
+localStorage.getItem("name");
+
+
+// promises in javaScript 
+
+function myDisplayer(some) {
+    document.getElementById("id2").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+    let x = 1;
+
+    if (x ==0) {
+        myResolve("OK")
+    }
+    else {
+        myReject("Some error is there");
+    }
+});
+myPromise.then(
+    function(value) {myDisplayer(value);},
+    function(error) {myDisplayer(error);}
+);
+
+setTimeout(function() {myFunPromise("I am jaikumar"); }, 3000);
+function myFunPromise(value) {
+    document.getElementById("id2").innerHTML = value;
+}
+function myFunTime() {
+    alert('Hello jai');
+}
