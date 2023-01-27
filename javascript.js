@@ -917,3 +917,33 @@ function myFunPromise(value) {
 function myFunTime() {
     alert('Hello jai');
 }
+
+class myClass {
+    constructor (name,year) {
+        this.name = name;
+        this.year = year;
+    }
+}
+
+let myCars = new myClass("ford", "2022");
+
+function myForm() {
+    const myObj = document.getElementById("id3");
+    if (!myObj.checkValidity()) {
+        document.getElementById("id3").innerHTML = 
+        myObj.validationMessage;
+    } else {
+        document.getElementById("id3").innerHTML =
+        "Input OK";
+    }
+}
+function loadDoc() {
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+        document.getElementById("xml").innerHTML = 
+        this.responseText;
+
+    }
+    xhttp.open("GET", "test.txt");
+    xhttp.send();
+}
