@@ -77,6 +77,14 @@
 <button type="button" onclick="loadDoc()">change content</button>
 <p id="xml"></p>
 
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()"
+method="post">
+Name: <input type="text" name="fname">
+<input type="submit" value="Submit">
+</form>
+<button id="myBtn">Try it</button>
+<p id="add"></p>
+
 
 <script src="javascript.js"></script>
 

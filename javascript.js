@@ -947,3 +947,66 @@ function loadDoc() {
     xhttp.open("GET", "test.txt");
     xhttp.send();
 }
+
+const lett = new Set(["a", "a", "d"]);
+console.log(lett);
+
+const maps = new Map([
+    ["apples", 300],
+    ["Banana", 200],
+
+
+]);
+class CCarr {
+    constructor(name, year) {
+        this.name = name;
+        this.year = year;
+    }
+    
+}
+let myccarr = new CCarr("bmw", 2023);
+console.log(myccarr);
+
+let objects = {
+    name : "Jaikumar",
+
+};
+objects.fname = function() {
+    return this.name;
+}
+    
+console.log(objects.fname());
+
+function Con(fname, lname, age) {
+    this.fname = fname;
+    this.lname = lname;
+    this.age = age;
+}
+
+const myname = new Con("John", "Doe", 20);
+console.log(Con.age);
+
+let promise = new Promise(
+    function(resolve, error) {
+
+        let data = true;
+        if(data) {
+            resolve("promise done")
+        }
+        else 
+        error("promise not done")
+
+    }
+)
+
+function validateForm() {
+    let x = document.forms["myForm"]["fname"].value;
+    if(x=='') {
+        alert("name must be filled out");
+        return false;
+    }
+}
+document.getElementById("myBtn").addEventListener("click", displayDate);
+function displayDate() {
+    document.getElementById("add").innerHTML = Date();
+}
