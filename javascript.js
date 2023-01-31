@@ -1010,3 +1010,168 @@ document.getElementById("myBtn").addEventListener("click", displayDate);
 function displayDate() {
     document.getElementById("add").innerHTML = Date();
 }
+
+let btn = document.getElementById("special");
+let dataele = document.getElementById("data");
+
+// btn.addEventListener("click", loadData)
+
+function loadData() {
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'test.txt', true)
+
+    xhr.send()
+
+    xhr.onprogress = function() {
+        dataele.innerHTML = "Loading..."
+    }
+    xhr.onload = function() {
+        dataele.innerHTML = xhr.responseText;
+    }
+}
+
+class mobiles {
+    constructor(n,r) {
+        this.name = n;
+        this.ram = r;
+    }
+    set priceSet(p){
+        if(p<=0){
+            alert("price cannot be less than zero");
+        }
+        else {
+            this.price = p;
+        }
+    }
+    get getName() {
+        return "mobile name is" + this.name;
+    }
+}
+
+let m1 = new mobiles("oneplus", "6gb");
+let m2 = new mobiles("redmi", "4gb");
+m1.priceSet = 180000;
+console.log(m1.name)
+
+
+let fil = [45, 4, 9, 16, 25];
+let fil1 = fil.every(myFun);
+
+function myFun(value, index, array) {
+    return value > 12;
+}
+let sli = "Banana, mango, orange";
+let exc = sli.slice(0, 7);
+console.log(exc);
+
+function Function1(n, a, r) {
+    this.name = n;
+    this.age = a;
+    this.rollNo = r;
+}
+Function1.prototype.lang = "english"
+let myFun1 = new Function1("jai", 22, 220)
+console.log(myFun1.lang);
+
+let map1 = new Map ([
+    ["apples", 300],
+    ["banana", 100]
+])
+
+let check = "";
+for (const x of map1.entries()) {
+    check += x + "<br>";
+}
+console.log(check)
+
+const call = {
+    fullName: function(city, conytry) {
+        return this.firstName + " " + this.lastNme + " " + city + " " + country;
+    }
+    
+}
+const call1 = {
+    firstName : "John",
+    lastName : "Doe"
+
+}
+let push1 =  ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+let citrus = push1.slice(2)
+console.log(citrus)
+
+const arrray = [1, 2, 3, 3, 4, 5];
+const arrray1 = arrray.every(myMapFun);
+
+function myMapFun(value, index, array) {
+    return value > 4;
+}
+console.log(arrray1)
+
+let someVar = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+let someVar1 = someVar.indexOf("Banana");
+console.log(someVar1);
+
+class Var {
+    constructor(brand) {
+        this.varName = brand;
+
+    }
+     present() {
+        return this. varName;
+     }
+  
+}
+
+class Var1 {
+    constructor(brand, mod) {
+        // super(brand);
+        this.modName = mod;
+
+    }
+    show() {
+        return this.present() + this.modName;
+    }
+}
+
+let myvar = new Var1("ford", "Mustang");
+
+
+let promise1 = new Promise(
+    function(success, error) {
+        let datacame = true ;
+        if(datacame){
+            success("Running successfully")
+        }
+        else {
+            error("ERRORR...")
+        }
+    }
+)
+
+promise1.then(function(data){
+    console.log(data)
+})
+promise1.catch(function(error)
+{
+    console.log(error)
+}
+)
+
+
+document.getElementById("myBtnn").addEventListener("click", function() {
+    alert("Hello world")
+});
+
+const parar = document.createElement("p");
+const node = document.createTextNode("This is the new paragraph");
+parar.appendChild(node);
+const elements = document.getElementById("first");
+elements.appendChild(parar);
+
+const para1 = document.createElement("p");
+const node1 = document.createTextNode("This is New TEXT");
+para1.appendChild(node1);
+const elements1 = document.getElementById("first");
+const child = document.getElementById("second")
+elements1.insertBefore(para1, child);
+
