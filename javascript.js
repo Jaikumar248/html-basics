@@ -1175,3 +1175,194 @@ const elements1 = document.getElementById("first");
 const child = document.getElementById("second")
 elements1.insertBefore(para1, child);
 
+// let arr22 = [1, 2, 3, 4]
+// let vari= " ";
+// for (let x of arr22 ) {
+//     vari += arr22[x]
+// }
+// console.log(vari)
+// function myDisplayer(some) {
+//     document.getElementById()
+// }
+
+// myCalculator(5, 5, myDisplayer)
+
+let t = "Please visit Microsoft";
+let t1 = t.replace("Microsoft", "W3schools");
+document.write(t1);
+
+let t2 = "Please visit Microsoft";
+let t3 = t2.charAt(0);
+document.write(t3)
+
+
+const numbers1 = [3, 4, 5, 6, 7];
+const numbers2 = numbers1.map(myFunNum);
+
+function myFunNum(value, index, array) {
+    return value*2;
+}
+document.write(numbers2);
+
+let dat = new Date(2022);
+document.write(dat)
+
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// let a1 = add(3, 5);
+
+
+// add = (a, b) => {
+//    return a+b;
+// }
+
+let object = {
+    fname: "jai",
+    lname: "kumar"
+};
+delete object.lname;
+console.log(object.lname)
+let object1 =new Object();
+object1.fname = "jaikumar"
+console.log(object1.fname);
+
+let per1 = {
+    fname: "jai",
+    lname: "kumar",
+    age: 22,
+    fullName: function() {
+        return this.fname + " " + this.lname + this.age + " " + this.fullname;
+    }
+};
+per1.fullname = "jaikumar";
+delete per1.fname;
+
+let cal = per1.fullName();
+console.log(cal)
+
+
+let mobile = {
+    mName: "redmi",
+    ram: "4gb",
+    price: 20000,
+    // mPrice: function() {
+    //     return this.price;
+    // }
+
+    get mPrice() {
+        return this.price + " " + this.color;
+    },
+    set lang(value) {
+        this.color = value;
+    }
+
+
+
+};
+mobile.lang = "black";
+
+let s = mobile.mPrice;
+console.log(s)
+
+
+function MyFunCon(first, second, third) {
+    this.firstName = first,
+    this.secondName = second,
+    this.thirdNmae = third,
+    this.allNames = function() {
+        return this.firstName + " " + this.secondName;
+    }
+};
+let myconstructor = new MyFunCon("jai", "kumar", "shridhar");
+console.log(myconstructor.allNames())
+
+
+let callMethod = {
+    callMeth: function() {
+        return this.firstName + " " + this.lastNme;
+    }
+}
+
+let callMethod1 = {
+    firstName: "jai",
+    lastName: "kumar!!"
+}
+
+let callMethod2 = {
+    firstName: "shridhar",
+    lastName: "hegde"
+}
+
+console.log(callMethod.callMeth.call(callMethod2));
+
+const bindMethod = {
+    name: "bablaabaa",
+    age: 20,
+    method: function() {
+        return this.name + " " + this.age;
+    }
+    
+}
+const bindMethod1 = {
+    name: "shri",
+    age: 22
+}
+let bind = bindMethod.method.bind(bindMethod1);
+console.log(bind())
+
+// function add() {
+//     let counter = 0;
+//     return function() {
+//         counter += 1;
+//         return counter;
+//     }
+// }
+
+mycallBack(3, 5, myCall);
+
+function mycallBack(a, b, myfun){
+    let sum = a+b;
+    return myfun(sum)
+}
+function myCall(somedata) {
+    console.log(somedata)
+}
+
+//Asynchronous 
+
+setTimeout(function() {
+    console.log("hello world!")
+}, 2000)
+console.log("this is Asychronous function");
+
+
+let pr = new Promise(function( resolve, error){
+    let x = 0;
+    if(x == 0) {
+       resolve("yes x is zero");
+    }
+    else {
+        error("x is not zero");
+    }
+
+});
+
+pr.then(function(data){
+    console.log(data)
+
+})
+pr.catch(function(err){
+    console.log(err)
+})
+
+// Async and Await function
+
+async function textMethod() {
+    x = await 4 + 5;
+    console.log("inside function") 
+}
+let res = textMethod()
+console.log("outside function")
